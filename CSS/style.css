@@ -1,0 +1,675 @@
+/* Font Stuff */
+@font-face {
+    font-family: "geist_bold";
+    src: url(../Fonts/Geist/ttf/Geist-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "geist_medium";
+    src: url(../Fonts/Geist/ttf/Geist-Medium.ttf);
+}
+
+@font-face {
+    font-family: "geist_italic";
+    src: url(../Fonts/Geist/ttf/Geist-Italic.ttf);
+}
+
+/* Global Stuff */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-inline-size: 100%;
+}
+
+
+
+/* Main Body */
+body {
+
+    /* Making Body 1 Screen-Size Tall */
+    min-height: 100vh;
+
+    /* Setting the Font for the Body */
+    font-family: geist_bold, geist_medium;
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 250px 1fr auto;
+    grid-template-areas:
+        "navbar main"
+        "sidebar main"
+        "footer footer";
+}
+
+/* Navigation Bar */
+nav {
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    background-color: #fff;
+    color: #1e1e1e;
+    padding: 1em;
+}
+
+/* Navigation Text */
+.logo_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 5px;
+    text-align: left;
+
+}
+
+.david {
+    font-family: "geist_bold";
+    font-size: 60px;
+    padding-left: 15px;
+}
+
+.david a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.david a:link {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.david a:visited {
+    text-decoration: none;
+}
+
+.david a:active {
+    text-decoration: none;
+}
+
+.haas {
+    font-family: "geist_bold";
+    font-size: 60px;
+    padding-left: 15px;
+}
+
+.haas a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.haas a:link {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.haas a:visited {
+    text-decoration: none;
+}
+
+.haas a:active {
+    text-decoration: none;
+}
+
+/* Sidebar */
+aside {
+    top: 250px;
+    position: sticky;
+    align-self: start;
+    grid-area: sidebar;
+    background-color: #fff;
+    padding-left: 15px;
+}
+
+/* Sidebar Text */
+aside a {
+    display: block;
+    color: #1e1e1e;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+aside ul {
+    list-style: none;
+}
+
+/* Links on mouse-over */
+aside a:hover:not(.active) {
+    text-decoration: underline;
+}
+
+/* Menu-Button */
+button {
+
+    /* Don't Display by Default*/
+    display: none;
+}
+
+/* Main Content */
+main {
+    grid-area: main;
+    background: #fff;
+    margin: 20px;
+    padding: 0;
+}
+
+.gallery_wrapper {
+    max-width: auto;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/* Styling for photo gallery*/
+/* Hard-Coded I am so sorry, web design is not my passion*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(25, auto);
+    gap: 1rem;
+}
+
+.gallery-item img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+/* Roc Fargas i Castells Alte Oper 1 */
+.gallery-item1 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 5;
+}
+
+/* Jon Urdapilleta Piano 1 */
+.gallery-item2 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+}
+
+/* Sophie LJSO */
+.gallery-item3 {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 4;
+}
+
+/* Johannes LJSO */
+.gallery-item4 {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 4;
+}
+
+/* Hanoi Street Photography 1 */
+.gallery-item5 {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 2;
+}
+
+/* Carmen LJSO */
+.gallery-item6 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 5;
+}
+
+/* Roc Fargas i Castells Conductor Portrait */
+.gallery-item7 {
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 10;
+}
+
+/* Christian Haas Portrait */
+.gallery-item8 {
+    grid-column: 3 / span 1;
+    grid-row: 8 / span 5;
+}
+
+/* Caroline Synn Portrait */
+.gallery-item9 {
+    grid-column: 4 / span 1;
+    grid-row: 8 / span 5;
+}
+
+/* Montpellier Street Photography */
+.gallery-item10 {
+    grid-column: 3 / span 1;
+    grid-row: 14 / span 5;
+}
+
+/* Roc Fargas i Castells Alte Oper 2 */
+.gallery-item11 {
+    grid-column: 4 / span 1;
+    grid-row: 14 / span 5;
+}
+
+/* Hanoi Street Photography 2 */
+.gallery-item12 {
+    grid-column: 2 / span 2;
+    grid-row: 19 / span 4;
+}
+
+/* Hanoi Street Photography 3 */
+.gallery-item13 {
+    grid-column: 1 / span 1;
+    grid-row: 19 / span 5;
+}
+
+/* Nora Khayata Portrait */
+.gallery-item14 {
+    grid-column: 4 / span 1;
+    grid-row: 19 / span 5;
+}
+
+/* Jon Urdapilleta Piano 2 */
+.gallery-item15 {
+    grid-column: 2 / span 2;
+    grid-row: 23 / span 10;
+}
+
+/* Kosova Street Photography */
+.gallery-item16 {
+    grid-column: 1 / span 1;
+    grid-row: 24 / span 5;
+}
+
+/* Roc Fargas i Castells Alte Oper 3 */
+.gallery-item17 {
+    grid-column: 4 / span 1;
+    grid-row: 24 / span 5;
+}
+
+/* Hanoi Street Photography 4 */
+.gallery-item18 {
+    grid-column: 1 / span 1;
+    grid-row: 29 / span 5;
+}
+
+/* Footer */
+.footer_wrapper {
+    grid-area: footer;
+    background: white;
+    color: #1e1e1e;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer_text a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.footer_text a:link {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.footer_text a:visited {
+    text-decoration: none;
+}
+
+.footer_text a:active {
+    text-decoration: none;
+}
+
+/* Links on mouse-over */
+.footer_text a:hover:not(.active) {
+    text-decoration: underline;
+}
+
+/* Typesetting */
+.portfolio {
+    font-family: "geist_medium";
+}
+
+.about {
+    font-family: "geist_medium";
+}
+
+.contact {
+    font-family: "geist_medium";
+}
+
+.contact_wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+}
+
+.contact_page {
+    font-family: geist_medium;
+    padding: 20px;
+    padding-top: 35px;
+    color: #1e1e1e;
+    text-decoration: none;
+    list-style: none;
+}
+
+.contact_page a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.contact_page a:link {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.contact_page a:visited {
+    text-decoration: none;
+}
+
+.contact_page a:active {
+    text-decoration: none;
+}
+
+/* Links on mouse-over */
+.contact_page a:hover:not(.active) {
+    text-decoration: underline;
+}
+
+.contact_page h1 {
+    font-family: geist_bold;
+    font-size: 30px;
+}
+
+.contact_mail {
+    padding: 20px;
+}
+
+.contact_wrapper {
+    font-size: 20px;
+}
+
+.contact_instagram {
+    padding-left: 20px;
+}
+
+.contact_instagram p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact_linkedin {
+    padding-left: 20px;
+}
+
+.contact_instagram img {
+    vertical-align: middle;
+}
+
+.contact_linkedin p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact_linkedin img {
+    vertical-align: middle;
+}
+
+.contact_photo {
+    padding: 20px;
+    max-width: 1500px;
+}
+
+.about_page {
+    font-family: geist_medium;
+    padding: 20px;
+    padding-top: 35px;
+    color: #1e1e1e;
+    font-size: 16px;
+}
+
+.about_wrapper {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 1fr;
+    gap: 5rem;
+}
+
+.about_text {
+    padding-top: 10px;
+}
+
+.impressum_page {
+    font-family: geist_medium;
+    padding: 20px;
+    padding-top: 35px;
+    max-width: 800px;
+    color: #1e1e1e;
+    text-decoration: none;
+    list-style: none;
+}
+
+.impressum_page h1,
+h2 {
+    font-family: geist_bold;
+}
+
+.impressum_page strong {
+    font-size: 20px;
+}
+
+.link_text {
+    font-family: geist_italic;
+}
+
+/* Layout Change for smaller screens*/
+@media screen and (max-width: 1300px) {
+
+    .about_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 2rem;
+    }
+}
+
+
+
+/* Layout Change for Mobile */
+@media screen and (max-width: 800px) {
+
+    body {
+        /* Change Grid for Mobile Layout */
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto 1fr auto;
+        grid-template-areas:
+            "navbar"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    button {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-y: 50%;
+        box-sizing: border-box;
+        display: block;
+        cursor: auto;
+        height: 100px;
+        width: 100px;
+        right: 0px;
+        top: 0px;
+        z-index: 999;
+        background: white;
+        border: none;
+        position: absolute;
+    }
+
+    .gallery {
+        display: grid;
+        /* TODO arrange the photos in a pretty way!*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(25, auto);
+        gap: 0.5rem;
+    }
+
+    /* Jon Urdapilleta Piano 1 */
+    .gallery-item2 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    /* Roc Fargas i Castells Alte Oper 1 */
+    .gallery-item1 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    /* Carmen LJSO */
+    .gallery-item6 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    /* Hanoi Street Photography 1 */
+    .gallery-item5 {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+    }
+
+    /* Sophie LJSO */
+    .gallery-item3 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    /* Johannes LJSO */
+    .gallery-item4 {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    /* Roc Fargas i Castells Conductor Portrait */
+    .gallery-item7 {
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 1;
+    }
+
+    /* Christian Haas Portrait */
+    .gallery-item8 {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+    /* Caroline Synn Portrait */
+    .gallery-item9 {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+    /* Montpellier Street Photography */
+    .gallery-item10 {
+        grid-column: 1 / span 1;
+        grid-row: 7 / span 1;
+    }
+
+    /* Roc Fargas i Castells Alte Oper 2 */
+    .gallery-item11 {
+        grid-column: 2 / span 1;
+        grid-row: 7 / span 1;
+    }
+
+    /* Hanoi Street Photography 2 */
+    .gallery-item12 {
+        grid-column: 1 / span 2;
+        grid-row: 8 / span 1;
+    }
+
+    /* Hanoi Street Photography 3 */
+    .gallery-item13 {
+        grid-column: 1 / span 1;
+        grid-row: 9 / span 1;
+    }
+
+    /* Nora Khayata Portrait */
+    .gallery-item14 {
+        grid-column: 2 / span 1;
+        grid-row: 9 / span 1;
+    }
+
+    /* Jon Urdapilleta Piano 2 */
+    .gallery-item15 {
+        grid-column: 1 / span 2;
+        grid-row: 10 / span 1;
+    }
+
+    /* Kosova Street Photography */
+    .gallery-item16 {
+        grid-column: 1 / span 1;
+        grid-row: 11 / span 1;
+    }
+
+    /* Roc Fargas i Castells Alte Oper 3 */
+    .gallery-item17 {
+        grid-column: 2 / span 1;
+        grid-row: 11 / span 1;
+    }
+
+    /* Hanoi Street Photography 4 */
+    .gallery-item18 {
+        grid-column: 1 / span 1;
+        grid-row: 12 / span 1;
+    }
+
+    /* Re-Align Sidebar */
+    aside {
+        top: 100px;
+        position: fixed;
+        align-self: normal;
+
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+
+        font-size: 10px;
+
+        /* Don't Show by Default */
+        display: none;
+    }
+
+    /* Re-Design Font */
+    .logo_wrapper {
+        display: grid;
+        grid-template-columns: 115px 50px;
+        grid-template-rows: 1fr;
+    }
+
+    .david {
+        font-family: "geist_bold";
+        font-size: 40px;
+    }
+
+    .haas {
+        font-family: "geist_bold";
+        font-size: 40px;
+        padding-left: 25px;
+    }
+
+    /* We Call this to Display Again */
+    .show {
+        display: block;
+    }
+
+    .about_page {
+        padding: 5px;
+        padding-top: 10px;
+    }
+
+    .portfolio {
+        font-size: 10px;
+    }
+
+    .about {
+        font-size: 10px;
+    }
+
+    .contact {
+        font-size: 10px;
+    }
+}
